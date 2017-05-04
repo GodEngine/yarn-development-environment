@@ -1,5 +1,3 @@
-# 运营活动
-
 ## 技术栈
 - <a href="https://yarnpkg.com/" target="_blank">Yarn</a>
 - <a href="http://es6.ruanyifeng.com/" target="_blank">ES6</a>
@@ -13,7 +11,7 @@
 - 单元测试 <a href="https://karma-runner.github.io/1.0/index.html" target="_blank">Karma</a> + <a href="https://jasmine.github.io/" target="_blank">Jasmine</a> + <a href="http://airbnb.io/enzyme/" target="_blank">Enzyme</a> + <a href="http://phantomjs.org/" target="_blank">PhantomJS</a>
 
 ## Yarn Scripts
-- `yarn start -- --env.p=[projectFolderName] --env.s(可选，是否生成雪碧图) --env.r(可选，是否支持 Retina 雪碧图)`     开发模式
+- `yarn start -- --env.p=[projectFolderName] --env.s(可选，是否生成雪碧图) --env.r(可选，是否支持 Retina 雪碧图) --env.m 是否开启css modules`     开发模式
 - `yarn run build -- --env.p=[projectFolderName]` 编译模式
 - `yarn run sprite -- --env.c=[componentName] --env.v=[version] --env.r(可选，是否支持 Retina 雪碧图)`
 - `yarn run lint -- --env.p=[projectFolderName]`  风格检查
@@ -29,12 +27,14 @@
 - `/public`     *Webpack 打包后生成文件的目录*
 
 ## 规范
-- 样式一律使用 scss
-- 布局一律使用 flex
+- 样式 scss
 
 ## 开发流程
-- 从 master 分支创建你的活动分支
-- cd apps/hd/ 安装依赖 yarn install
+- cd 根目录下 安装依赖 yarn install
+- yarn start
 - coding
-- 代码推送到 test 提测
-- 代码推送到 master 上线
+- yarn build
+
+## webpack目录
+- webpack.configbabel.js用到的配置文件
+- readme说明每个配置文件的功能
